@@ -1,0 +1,19 @@
+{
+	"BinSearch": {
+		"prefix": "binSearch",
+		"body" : [
+			"static int binSearch(int[] a, int n, int key) {"
+			"\tint pl = 0; // 探索範囲先頭のインデックス"
+			"\tint pr = n - 1; // 探索範囲末尾のインデックス"
+			"\tdo {"
+			"\t\tint pc = (pl + pr) / 2; // 中央要素のインデックス"
+			"\t\tif (a[pc] == key) return pc; // 探索成功"
+			"\t\telse if (a[pc] < key) pl = pc + 1; // 探索範囲を後半に絞り込む"
+			"\t\telse pr = pc - 1; // 探索範囲を前半に絞り込む"
+			"\t} while(pl <= pr);"
+			"\treturn -1; // 探索失敗"
+			"}"
+		],
+		"description": "2分探索"
+	}
+}
